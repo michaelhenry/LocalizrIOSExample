@@ -14,7 +14,7 @@
 		175DCE721FC9D0450086D6E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175DCE701FC9D0450086D6E3 /* LaunchScreen.storyboard */; };
 		175DCE7D1FC9D0450086D6E3 /* LocalizrIOSExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175DCE7C1FC9D0450086D6E3 /* LocalizrIOSExampleTests.swift */; };
 		175DCE881FC9D0450086D6E3 /* LocalizrIOSExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175DCE871FC9D0450086D6E3 /* LocalizrIOSExampleUITests.swift */; };
-		175DCEA11FC9D56A0086D6E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 175DCEA31FC9D56A0086D6E3 /* Localizable.strings */; };
+		175DCEA91FC9DC630086D6E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 175DCEAB1FC9DC630086D6E3 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +48,9 @@
 		175DCE831FC9D0450086D6E3 /* LocalizrIOSExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalizrIOSExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		175DCE871FC9D0450086D6E3 /* LocalizrIOSExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizrIOSExampleUITests.swift; sourceTree = "<group>"; };
 		175DCE891FC9D0450086D6E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		175DCEA21FC9D56A0086D6E3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		175DCEA41FC9D56E0086D6E3 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/Localizable.strings; sourceTree = "<group>"; };
-		175DCEA61FC9D58A0086D6E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		175DCEAD1FC9DC680086D6E3 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/Localizable.strings; sourceTree = "<group>"; };
+		175DCEAE1FC9DC6F0086D6E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		175DCEAF1FC9DC840086D6E3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,6 @@
 		175DCE5B1FC9D0450086D6E3 = {
 			isa = PBXGroup;
 			children = (
-				175DCEA31FC9D56A0086D6E3 /* Localizable.strings */,
 				175DCE661FC9D0450086D6E3 /* LocalizrIOSExample */,
 				175DCE7B1FC9D0450086D6E3 /* LocalizrIOSExampleTests */,
 				175DCE861FC9D0450086D6E3 /* LocalizrIOSExampleUITests */,
@@ -102,6 +101,7 @@
 		175DCE661FC9D0450086D6E3 /* LocalizrIOSExample */ = {
 			isa = PBXGroup;
 			children = (
+				175DCEAB1FC9DC630086D6E3 /* Localizable.strings */,
 				175DCE671FC9D0450086D6E3 /* AppDelegate.swift */,
 				175DCE691FC9D0450086D6E3 /* ViewController.swift */,
 				175DCE6B1FC9D0450086D6E3 /* Main.storyboard */,
@@ -240,7 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				175DCE721FC9D0450086D6E3 /* LaunchScreen.storyboard in Resources */,
-				175DCEA11FC9D56A0086D6E3 /* Localizable.strings in Resources */,
+				175DCEA91FC9DC630086D6E3 /* Localizable.strings in Resources */,
 				175DCE6F1FC9D0450086D6E3 /* Assets.xcassets in Resources */,
 				175DCE6D1FC9D0450086D6E3 /* Main.storyboard in Resources */,
 			);
@@ -320,12 +320,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		175DCEA31FC9D56A0086D6E3 /* Localizable.strings */ = {
+		175DCEAB1FC9DC630086D6E3 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				175DCEA21FC9D56A0086D6E3 /* ja */,
-				175DCEA41FC9D56E0086D6E3 /* zh */,
-				175DCEA61FC9D58A0086D6E3 /* Base */,
+				175DCEAD1FC9DC680086D6E3 /* zh */,
+				175DCEAE1FC9DC6F0086D6E3 /* Base */,
+				175DCEAF1FC9DC840086D6E3 /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

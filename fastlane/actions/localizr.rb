@@ -29,7 +29,7 @@ module Fastlane
             lproj_name)
         }
       rescue
-        UI.user_error!("An error occured on localizr. Please verify the configuration for the following: localizr_server, localizr_api_token, localizr_app_slug.")
+        UI.user_error!("An error occured on localizr. Please verify the configuration and then try again.")
       end
 
       #####################################################
@@ -78,7 +78,7 @@ module Fastlane
                                        env_name: "FL_LOCALIZR_LPROJ_TARGET_PATH",
                                        description: "Lproj target path for LocalizrAction",
                                        verify_block: proc do |value|
-                                          UI.user_error!("No lproj_target_path for LocalizrAction given, pass using `lproj_target_path: 'locales/'") unless (value and not value.empty?)
+                                          UI.user_error!("No lproj_target_path for LocalizrAction given, pass using `lproj_target_path: 'Project'") unless (value and not value.empty?)
                                        end),
         ]
       end
