@@ -1,0 +1,39 @@
+# Customize this file, documentation can be found here:
+# https://docs.fastlane.tools/actions/
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.66.2"
+
+default_platform :ios
+
+platform :ios do
+
+  def update_localizable
+    localizr(
+      localizr_server: 'http://localizr.iamkel.net',
+      localizr_api_token: '3ffafed1e4922b735524d9549c6a4619fc556f6c',
+      locale_codes:  'en,ja,zh',
+      localizr_app_slug: 'demo',
+      lproj_target_path: 'LocalizrIOSExample'
+    )
+  end
+  desc "Runs all the tests"
+    update_localizable
+    scan
+  end
+
+  desc "Generates the localized strings"
+  lane :localized do
+    update_localizable
+  end
+
+end
