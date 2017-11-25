@@ -16,6 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    
+    let launchArgs = ProcessInfo.processInfo.arguments
+    let userDefaults = UserDefaults.standard
+
+    if launchArgs.contains("-AppleLocale") {
+      let indexOfAppLocale = launchArgs.index(of: "-AppleLocale")
+      
+      let appleLocale = launchArgs[indexOfAppLocale! + 1].components(separatedBy: "-").first!
+      userDefaults.set(appleLocale, forKey: AppSettingKey.localeKey.rawValue)
+    }
     return true
   }
 
@@ -41,6 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
 
-
+  
 }
 

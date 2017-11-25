@@ -8,8 +8,18 @@
 
 extension String {
   
-  var localized:String {
-    return NSLocalizedString(self, comment: "")
+  var localized: String {
+    
+    let localeCode = UserDefaults.standard.string(forKey: AppSettingKey.localeKey.rawValue)
+    var s = ""
+    if let path = Bundle.main.path(forResource: localeCode, ofType: "lproj") {
+      if let bundle = Bundle(path: path) {
+        s =  NSLocalizedString(self, tableName: nil, bundle: bundle, value: "", comment: "")
+      }
+    } else {
+      s = NSLocalizedString(self, comment: "")
+    }
+    return s
   }
 }
 import UIKit
@@ -79,22 +89,29 @@ class ViewController: UITableViewController {
     return localeCell
   }
   
+  func updateAppLocale(_ locale:String) {
+    UserDefaults.standard.set(locale, forKey: AppSettingKey.localeKey.rawValue)
+  }
+  
   @IBAction func changeLocale(_ sender: Any) {
-    let localeSelector = UIAlertController(title: "Select", message: nil, preferredStyle: .actionSheet)
+    let localeSelector = UIAlertController(title: "Select a Language", message: nil, preferredStyle: .actionSheet)
     
     localeSelector.addAction(UIAlertAction(title: "English", style: .default, handler: { (action) in
-      
+      self.updateAppLocale("en")
+      self.tableView.reloadData()
     }))
     
     localeSelector.addAction(UIAlertAction(title: "Japanese", style: .default, handler: { (action) in
-      
+      self.updateAppLocale("ja")
+      self.tableView.reloadData()
     }))
     
     localeSelector.addAction(UIAlertAction(title: "Chinese", style: .default, handler: { (action) in
-      
+      self.updateAppLocale("zh")
+      self.tableView.reloadData()
     }))
     
-    localeSelector.addAction(UIAlertAction(title: "CANCE", style: .cancel, handler: { (action) in
+    localeSelector.addAction(UIAlertAction(title: "CANCEL", style: .cancel, handler: { (action) in
       
     }))
     

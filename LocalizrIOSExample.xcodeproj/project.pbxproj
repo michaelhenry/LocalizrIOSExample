@@ -15,6 +15,7 @@
 		175DCE7D1FC9D0450086D6E3 /* LocalizrIOSExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175DCE7C1FC9D0450086D6E3 /* LocalizrIOSExampleTests.swift */; };
 		175DCE881FC9D0450086D6E3 /* LocalizrIOSExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175DCE871FC9D0450086D6E3 /* LocalizrIOSExampleUITests.swift */; };
 		175DCEA91FC9DC630086D6E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 175DCEAB1FC9DC630086D6E3 /* Localizable.strings */; };
+		175DCEB11FC9DDD10086D6E3 /* AppSettingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175DCEB01FC9DDD10086D6E3 /* AppSettingKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		175DCEAD1FC9DC680086D6E3 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/Localizable.strings; sourceTree = "<group>"; };
 		175DCEAE1FC9DC6F0086D6E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		175DCEAF1FC9DC840086D6E3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		175DCEB01FC9DDD10086D6E3 /* AppSettingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				175DCEAB1FC9DC630086D6E3 /* Localizable.strings */,
 				175DCE671FC9D0450086D6E3 /* AppDelegate.swift */,
 				175DCE691FC9D0450086D6E3 /* ViewController.swift */,
+				175DCEB01FC9DDD10086D6E3 /* AppSettingKey.swift */,
 				175DCE6B1FC9D0450086D6E3 /* Main.storyboard */,
 				175DCE6E1FC9D0450086D6E3 /* Assets.xcassets */,
 				175DCE701FC9D0450086D6E3 /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				175DCE6A1FC9D0450086D6E3 /* ViewController.swift in Sources */,
+				175DCEB11FC9DDD10086D6E3 /* AppSettingKey.swift in Sources */,
 				175DCE681FC9D0450086D6E3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
