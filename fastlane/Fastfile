@@ -23,7 +23,8 @@ platform :ios do
       localizr_api_token: '3ffafed1e4922b735524d9549c6a4619fc556f6c',
       locale_codes:  'en,ja,zh',
       localizr_app_slug: 'demo',
-      lproj_target_path: 'LocalizrIOSExample'
+      output_target_path: 'LocalizrIOSExample',
+      platform: 'ios',
     )
   end
 
